@@ -3765,7 +3765,7 @@ class FileCheckerThread(threading.Thread):
             if path[-4:] in ('.pyo', '.pyc'): path = path[:-1]
             if path and exists(path): files[path] = mtime(path)
 
-        for path in glob('rapydscript/*.pyj'):
+        for path in glob('rapydscript/*.py'):
             files[path] = mtime(path)
 
         while not self.status:
